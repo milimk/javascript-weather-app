@@ -3,43 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather App</title>
-    <style src="src/style.css"></style>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <header>
-      <div class="current-date">Current Date</div>
-      <div class="search">
-        <form action="" class="search-form">
-          <input
-            type="text"
-            placeholder="Enter a city"
-            class="search-input"
-            required
-          />
-          <input type="submit" value="→" class="search-button" />
-        </form>
+    <div class="content">
+      <header>
+        <div class="current-date">Current Date</div>
+        <div class="search">
+          <form action="" class="search-form">
+            <input
+              type="text"
+              placeholder="Enter a city"
+              class="search-input"
+              required
+            />
+            <input type="submit" value="→" class="search-button" />
+          </form>
+        </div>
+      </header>
+      <h2>City name</h2>
+      <div class="current-city-weather">
+        <span>IMAGE</span>
+        <span>
+          24˚C <br />
+          Weather condition here
+        </span>
       </div>
-    </header>
-    <h2>City name</h2>
-    <div class="current-city-weather">
-      <span>IMAGE</span>
-      <span>
-        24˚C <br />
-        Weather condition here
-      </span>
+      <main></main>
+      <footer>
+        Coded by
+        <a href="https://github.com/milimk" target="_blank"> MiliM</a>,
+        open-sourced on
+        <a
+          href="https://github.com/milimk/shecodes-weather-app"
+          target="_blank"
+        >
+          GitHub</a
+        >
+        and hosted on
+        <a href="https://weather-milim.netlify.app/" target="_blank">Netlify</a>
+      </footer>
     </div>
-    <main></main>
-    <footer>
-      Coded by
-      <a href="https://github.com/milimk" target="_blank"> MiliM</a>,
-      open-sourced on
-      <a href="https://github.com/milimk/shecodes-weather-app" target="_blank">
-        GitHub</a
-      >
-      and hosted on
-      <a href="https://weather-milim.netlify.app/" target="_blank">Netlify</a>
-    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>

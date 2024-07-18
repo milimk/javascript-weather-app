@@ -1,0 +1,13 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fff5e4;
+}
+
+.content {
+  margin: 30px auto;
+  max-width: 500px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

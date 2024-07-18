@@ -1,3 +1,4 @@
+// Current date display
 function formatDate(now) {
   let date = now.getDate();
   let year = now.getFullYear();
@@ -45,3 +46,14 @@ function formatDate(now) {
 let currentDateElement = document.querySelector(".current-date");
 let current = new Date();
 currentDateElement.innerHTML = formatDate(current);
+
+// Search engine
+function searchResult(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-input");
+  let cityElement = document.querySelector("#current-city-name");
+  cityElement.innerHTML = searchInput.value;
+}
+
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", searchResult);

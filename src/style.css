@@ -63,10 +63,6 @@ main {
   padding-bottom: 10px;
 }
 
-.current-weather-icon {
-  font-size: 70px;
-}
-
 .current-city-weather {
   display: flex;
   justify-content: center;
@@ -76,7 +72,7 @@ main {
 .current-temp-container {
   display: flex;
   margin-left: 15px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .current-temp {

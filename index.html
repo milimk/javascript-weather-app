@@ -4,9 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <style src="src/style.css"></style>
   </head>
   <body>
-    <h1>Weather App</h1>
+    <header>
+      <div class="current-date">Current Date</div>
+      <div class="search">
+        <form action="" class="search-form">
+          <input
+            type="text"
+            placeholder="Enter a city"
+            class="search-input"
+            required
+          />
+          <input type="submit" value="→" class="search-button" />
+        </form>
+      </div>
+    </header>
+    <h2>City name</h2>
+    <div class="current-city-weather">
+      <span>IMAGE</span>
+      <span>
+        24˚C <br />
+        Weather condition here
+      </span>
+    </div>
+    <main></main>
     <footer>
       Coded by
       <a href="https://github.com/milimk" target="_blank"> MiliM</a>,
@@ -17,5 +40,6 @@
       and hosted on
       <a href="https://weather-milim.netlify.app/" target="_blank">Netlify</a>
     </footer>
+    <script src="src/index.js"></script>
   </body>
 </html>

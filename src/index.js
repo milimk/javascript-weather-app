@@ -54,9 +54,15 @@ function updateWeather(response) {
   let temperatureElement = document.querySelector("#current-temp");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#current-city-name");
+  let conditionElement = document.querySelector("#current-city-condition");
+  let humidityElement = document.querySelector("#current-city-humidity");
+  let windElement = document.querySelector("#current-city-wind");
 
-  cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
+  cityElement.innerHTML = response.data.city;
+  conditionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
 }
 
 function searchCity(city) {

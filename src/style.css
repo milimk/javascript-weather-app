@@ -111,9 +111,9 @@ main {
   margin-bottom: 7px;
 }
 
-.forecast-icon {
-  font-size: 35px;
+.forecast-icon img {
   margin-bottom: 7px;
+  width: 100%;
 }
 
 .forecast-temp {

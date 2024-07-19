@@ -65,6 +65,8 @@ function updateWeather(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
+
+  getForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -86,7 +88,19 @@ function searchResult(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchResult);
 
-function displayForecast() {
+// Display forecast with API call
+
+function getForecast(city) {
+  apiKey = "0af4f7ebo6ce11605e35ecb7eatc1716";
+  apiURL = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
+}
+
+// Display forecast with fake data
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecastDays = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -109,5 +123,6 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHtml;
 }
 
-searchCity("Vienna");
-displayForecast();
+// Calling functions to run
+
+searchCity("Vienna"); // Default city to load when page is loaded

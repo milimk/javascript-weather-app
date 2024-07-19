@@ -94,6 +94,46 @@ main {
   font-weight: 600;
 }
 
+.forecast-container {
+  margin-top: 45px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.forecast-day {
+  padding: 0 20px 0 20px;
+}
+
+.forecast-date {
+  font-size: 15px;
+  color: #767676;
+  margin-bottom: 7px;
+}
+
+.forecast-icon {
+  font-size: 35px;
+  margin-bottom: 7px;
+}
+
+.forecast-temp {
+  display: flex;
+  justify-content: center;
+}
+
+.forecast-temp-low {
+  font-size: 14px;
+  color: #f88181;
+  font-weight: 400;
+}
+
+.forecast-temp-high {
+  font-size: 14px;
+  color: #f88181;
+  font-weight: 700;
+  padding-left: 7px;
+}
+
 footer {
   border-top: 1px solid #ffefed;
   padding: 20px 0 0 0;

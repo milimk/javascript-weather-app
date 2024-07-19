@@ -86,4 +86,28 @@ function searchResult(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchResult);
 
+function displayForecast() {
+  let forecastDays = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  forecastDays.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+          <div class="forecast-day" id="forecast-day">
+            <div class="forecast-date" id="forecast-date">${day}</div>
+            <div class="forecast-icon" id="forecast-icon">☀️</div>
+            <div class="forecast-temp" id="forecast-temp">
+              <div class="forecast-temp-low" id="forecast-temp-low">15˚</div>
+              <div class="forecast-temp-high" id="forecast-temp-high">19˚</div>
+            </div>
+          </div>
+        `;
+  });
+
+  let forecastElement = document.querySelector("#forecast-container");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 searchCity("Vienna");
+displayForecast();
